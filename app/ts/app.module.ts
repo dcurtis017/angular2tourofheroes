@@ -11,13 +11,15 @@ import {AppComponent} from './app.component';
 import {HeroesComponent} from './heroes.component';
 import {DashboardComponent} from './dashboard.component';
 import {HeroDetailComponent} from './hero-detail.component';
+import {HeroSearchComponent} from './hero-search.component';
 import {HeroService} from './hero.service';
 //import {SlowHeroService} from './slow-hero.service';
 import {routing} from './app.routing';
+import './rxjs-extensions';
 
 @NgModule({
     imports: [BrowserModule, FormsModule, routing, HttpModule, InMemoryWebApiModule.forRoot(InMemoryDataService)],
-    declarations: [AppComponent, HeroDetailComponent, HeroesComponent, DashboardComponent] ,
+    declarations: [AppComponent, HeroDetailComponent, HeroesComponent, DashboardComponent, HeroSearchComponent] ,
     bootstrap: [AppComponent],
     providers:[HeroService]//these providers will be available in every component
     //register application wide services in the root AppModule providers section

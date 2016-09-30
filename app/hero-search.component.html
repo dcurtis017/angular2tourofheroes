@@ -1,0 +1,13 @@
+<div id = "search-component">
+    <h4>Hero Search</h4>
+    <input #searchBox id = "search-box" (keyup)="search(searchBox.value);" />
+    <div>
+        <div *ngFor="let hero of heroes | async"
+            (click)="gotoDetail(hero);" class = "search-result"
+        ><!--The async pipe subscribes to the Observable and produces the array of heroes to *ngFor.-->
+           {{hero.name}} 
+        </div>
+    </div>
+        
+
+</div>
